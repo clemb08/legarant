@@ -1,6 +1,6 @@
 # Application mobile Legarant
 
-## description
+## Description
 
 Application pour le projet final du parcours développeur d'application (Salesforce) d'Openclassrooms. l'objectif de cette application est de permettre au client d'afficher des données présentes dans son organisation Salesforce à ses clients représentés en tant que Contact dans l'organisation.
 
@@ -43,6 +43,11 @@ L'application est développée en deux parties. Un Back-end NodeJs dont l'objet 
 ### Télécharger et démarrer l'application en local
 
 1 - Cloner l'application dans un dossier en local ;
+
+2 - Crer un fichier .env au root du projet et y ajouter : `DATABASE_URL=<YOUR POSTGRES DATABASE URI`;
+
 2 - Se positionner dans le dossier `/client` - `cd client/` ;
+
 3 - Build de l'application : `ng build` ;
+
 4 - Se positionner au root du projet, démarrer l'application : `npm start` ;
