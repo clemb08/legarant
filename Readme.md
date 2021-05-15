@@ -1,4 +1,4 @@
-### Application mobile Legarant
+# Application mobile Legarant
 
 ## description
 
@@ -6,13 +6,13 @@ Application pour le projet final du parcours développeur d'application (Salesfo
 
 ## L'application
 
-L'application est développé en deux parties. Un Back-end NodeJs dont l'objet est double :
+L'application est développée en deux parties. Un Back-end NodeJs dont l'objet est double :
 - Servir le buil de la partie front-end ;
 - Contient des endpoints API permettant de transmettre les requêtes du client à la base de donnée ;
 
 ## Tester l'application en local
 
-# Pre-requisite
+### Pre-requisite
 
 1 - Créer une organisation Salesforce (Developer Edition) : https://developer.salesforce.com/signup ;
 
@@ -33,15 +33,21 @@ L'application est développé en deux parties. Un Back-end NodeJs dont l'objet e
       - Connecter l'add-on à l'organisation Salesforce créée à l'étape 1 ;
       - Connecter l'add-on à la database Postgres créée précédemment ;
       - Création de 3 Mappings :
+        
         Contact : Active__c, CreatedDate, Email, HomePhone, Id, LastName, MobilePhone, Name, Password__c, Phone, Title, Username__c ; (Indiquer Username__c comme unique identifier)
 
         Contract : ContractNumber, CreatedDate, CustomerSignedId, EndeDate, Id, StartDate, Status ;
 
         OrderItem : Contract__c, CreatedDate, EndDate, Id, Product2Id, Product_Name__c, Quantity, TotalPrice ;
 
-# Télécharger et démarrer l'application en local
+### Télécharger et démarrer l'application en local
 
 1 - Cloner l'application dans un dossier en local ;
+
+2 - Crer un fichier .env au root du projet et y ajouter : `DATABASE_URL=<YOUR POSTGRES DATABASE URI`;
+
 2 - Se positionner dans le dossier `/client` - `cd client/` ;
+
 3 - Build de l'application : `ng build` ;
+
 4 - Se positionner au root du projet, démarrer l'application : `npm start` ;
