@@ -1,6 +1,6 @@
 # Application mobile Legarant
 
-## description
+## Description
 
 Application pour le projet final du parcours développeur d'application (Salesforce) d'Openclassrooms. l'objectif de cette application est de permettre au client d'afficher des données présentes dans son organisation Salesforce à ses clients représentés en tant que Contact dans l'organisation.
 
