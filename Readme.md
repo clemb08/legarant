@@ -26,12 +26,18 @@ L'application est développée en deux parties. Un Back-end NodeJs dont l'objet 
     - Product_Name__c : Formula (Product2.Name) ;
 
 2 - Créer un compte Heroku gratuitement : https://signup.heroku.com ;
+
 3 - Créer une application Heroku ;
+
 4 - Ajouter les add-ons :
+
     - Heroku Postgres ;
+    
     - Heroku Connect :
       - Connecter l'add-on à l'organisation Salesforce créée à l'étape 1 ;
+      
       - Connecter l'add-on à la database Postgres créée précédemment ;
+     
       - Création de 3 Mappings :
         
         Contact : Active__c, CreatedDate, Email, HomePhone, Id, LastName, MobilePhone, Name, Password__c, Phone, Title, Username__c ; (Indiquer Username__c comme unique identifier)
@@ -44,10 +50,16 @@ L'application est développée en deux parties. Un Back-end NodeJs dont l'objet 
 
 1 - Cloner l'application dans un dossier en local ;
 
-2 - Crer un fichier .env au root du projet et y ajouter : `DATABASE_URL=<YOUR POSTGRES DATABASE URI`;
+2 - Créer un fichier .env au root du projet et y ajouter : `DATABASE_URL=<YOUR POSTGRES DATABASE URI` && `PORT=3000`;
 
-2 - Se positionner dans le dossier `/client` - `cd client/` ;
+3 - Télécharger les dépendances de l'application Node : `npm install` ;
 
-3 - Build de l'application : `ng build` ;
+4 - Se positionner dans le dossier `/client` - `cd client/` ;
 
-4 - Se positionner au root du projet, démarrer l'application : `npm start` ;
+5 - Télécharger les dépendances de l'application Angular : `npm install` ;
+
+6 - Build de l'application : `ng build` ;
+
+7 - Se positionner au root du projet, démarrer l'application : `npm start` ;
+
+8 - Ouvrir un navigateur : http://localhost:3000/ ;
