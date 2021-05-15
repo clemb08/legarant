@@ -63,3 +63,13 @@ L'application est développée en deux parties. Un Back-end NodeJs dont l'objet 
 7 - Se positionner au root du projet, démarrer l'application : `npm start` ;
 
 8 - Ouvrir un navigateur : http://localhost:3000/ ;
+
+### Deployer l'application en Production (Application Heroku)
+
+1 - Lier le repository GitHub à Heroku via la branche main ou master ;
+
+2 - Modifier le fichier `/client/src/environments/environment.prod.ts` afin que l'attribut `apiUrl` ait pour valeur le nom de domaine de l'application Heroku ;
+
+3 - Se positionner dans le dossier /client et build l'aaplication en mode production : `ng build --prod` ;
+
+4 - Merger les modifications du build dans main ou master ;
