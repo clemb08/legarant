@@ -6,7 +6,7 @@ Application pour le projet final du parcours développeur d'application (Salesfo
 
 ## L'application
 
-L'application est développé en deux parties. Un Back-end NodeJs dont l'objet est double :
+L'application est développée en deux parties. Un Back-end NodeJs dont l'objet est double :
 - Servir le buil de la partie front-end ;
 - Contient des endpoints API permettant de transmettre les requêtes du client à la base de donnée ;
 
@@ -33,6 +33,7 @@ L'application est développé en deux parties. Un Back-end NodeJs dont l'objet e
       - Connecter l'add-on à l'organisation Salesforce créée à l'étape 1 ;
       - Connecter l'add-on à la database Postgres créée précédemment ;
       - Création de 3 Mappings :
+        
         Contact : Active__c, CreatedDate, Email, HomePhone, Id, LastName, MobilePhone, Name, Password__c, Phone, Title, Username__c ; (Indiquer Username__c comme unique identifier)
 
         Contract : ContractNumber, CreatedDate, CustomerSignedId, EndeDate, Id, StartDate, Status ;
