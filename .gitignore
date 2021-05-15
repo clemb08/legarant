@@ -1,0 +1,29 @@
+# Dependency directories
+/node_modules
+
+# Snowpack dependency directory (https://snowpack.dev/)
+web_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# dotenv environment variables file
+.env
+.env.test
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+/client/.DS_STORE
+
+/client/node_modules
+
+# Ignore npm/yarn debug log
+npm-debug.log
+yarn-error.log
+
+# rollup-test output
+/client/modules/rollup-test/dist/

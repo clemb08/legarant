@@ -1,0 +1,75 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Your Profile</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <ng-template [ngIf]="state === 'view'" [ngIfElse]="editState">
+      <mat-grid-list cols="2" rowHeight="50px">
+        <mat-grid-tile class="titleContainer"><h4 class="title">Name</h4></mat-grid-tile><mat-grid-tile class="valueContainer"><p class="value">{{ user.name }}</p></mat-grid-tile>
+        <mat-grid-tile class="titleContainer"><h4 class="title">Username</h4></mat-grid-tile><mat-grid-tile class="valueContainer"><p class="value">{{ user.username }}</p></mat-grid-tile>
+        <mat-grid-tile class="titleContainer"><h4 class="title">Title</h4></mat-grid-tile><mat-grid-tile class="valueContainer">
+          <ng-template [ngIf]="user.title !== null" [ngIfElse]="nullTitle"><p class="value">{{ user.title }}</p></ng-template>
+          <ng-template #nullTitle><p class="nullValue">[You can add your title]</p></ng-template>
+        </mat-grid-tile>
+        <mat-grid-tile class="titleContainer"><h4 class="title">Email</h4></mat-grid-tile><mat-grid-tile class="valunullVContainer">
+          <ng-template [ngIf]="user.email !== null" [ngIfElse]="nullemail"><p class="value">{{ user.email }}</p></ng-template>
+          <ng-template #nullemail><p class="nullValue">[You can add your Email]</p></ng-template>
+        </mat-grid-tile>
+        <mat-grid-tile class="titleContainer"><h4 class="title">Phone</h4></mat-grid-tile><mat-grid-tile class="valueContainer">
+          <ng-template [ngIf]="user.phone !== null" [ngIfElse]="nullphone"><p class="value">{{ user.phone }}</p></ng-template>
+          <ng-template #nullphone><p class="nullValue">[You can add your Phone number]</p></ng-template>
+        </mat-grid-tile>
+        <mat-grid-tile class="titleContainer"><h4 class="title">Mobile</h4></mat-grid-tile><mat-grid-tile class="valueContainer">
+          <ng-template [ngIf]="user.mobile !== null" [ngIfElse]="nullmobile"><p class="value">{{ user.mobile }}</p></ng-template>
+          <ng-template #nullmobile><p class="nullValue">[You can add your Mobile number]</p></ng-template>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <mat-card-actions>
+        <button mat-raised-button class="editButton" (click)="editProfile()" color="primary">Edit</button>
+      </mat-card-actions>
+    </ng-template>
+    <ng-template #editState>
+      <form class="contact-form" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <mat-grid-list cols="2" rowHeight="75px">
+          <mat-grid-tile class="titleContainer"><h4 class="title">Name</h4></mat-grid-tile>
+          <mat-grid-tile class="valueContainer">
+            <mat-form-field appearance="standard">
+              <input matInput  class="formField" placeholder="Name" formControlName="nameForm">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile class="titleContainer"><h4 class="title">Username</h4></mat-grid-tile><mat-grid-tile class="valueContainer">
+            <mat-form-field appearance="standard">
+              <input matInput  class="formField" placeholder="Username" formControlName="usernameForm">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile class="titleContainer"><h4 class="title">Title</h4></mat-grid-tile><mat-grid-tile class="valueContainer">
+            <mat-form-field appearance="standard">
+              <input matInput  class="formField" placeholder="Title" formControlName="titleForm">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile class="titleContainer"><h4 class="title">Email</h4></mat-grid-tile><mat-grid-tile class="valueContainer">
+            <mat-form-field appearance="standard">
+              <input matInput  class="formField" placeholder="Email" formControlName="emailForm">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile class="titleContainer"><h4 class="title">Phone</h4></mat-grid-tile><mat-grid-tile class="valueContainer">
+            <mat-form-field appearance="standard">
+              <input matInput  class="formField" placeholder="Phone" formControlName="phoneForm">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile class="titleContainer"><h4 class="title">Mobile</h4></mat-grid-tile><mat-grid-tile class="valueContainer">
+            <mat-form-field appearance="standard">
+              <input matInput  class="formField" placeholder="Mobile" formControlName="mobileForm">
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-card-actions class="actionForm">
+          <div class="buttonsForm">
+          <button mat-raised-button type="submit" (click)="onSubmit()" color="primary">Save</button>
+          <button mat-raised-button (click)="cancelEdit()" color="primary">Cancel</button>
+          </div>
+        </mat-card-actions>
+      </form>
+    </ng-template>
+  </mat-card-content>
+</mat-card>

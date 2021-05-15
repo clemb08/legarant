@@ -1,0 +1,29 @@
+<mat-card class="contract-card" *ngFor="let contract of contracts">
+  <mat-card-header>
+    <mat-card-title>{{ contract.contractnumber }}</mat-card-title>
+    <mat-card-subtitle>{{ contract.status }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-grid-list cols="2" rowHeight="50px">
+      <mat-grid-tile class="titleContainer"><h4 class="title">Start date</h4></mat-grid-tile><mat-grid-tile class="valueContainer"><p class="value">{{ contract.startdate | date }}</p></mat-grid-tile>
+      <mat-grid-tile class="titleContainer"><h4 class="title">End Date</h4></mat-grid-tile><mat-grid-tile class="valueContainer"><p class="value">{{ contract.enddate | date }}</p></mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let product of contract.products">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ product.name }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-grid-list cols="2" rowHeight="50px">
+          <mat-grid-tile class="titleContainer"><h4 class="title">Quantity</h4></mat-grid-tile><mat-grid-tile class="valueContainer"><p class="value">{{ product.quantity }}</p></mat-grid-tile>
+          <mat-grid-tile class="titleContainer"><h4 class="title">Price</h4></mat-grid-tile><mat-grid-tile class="valueContainer"><p class="value">{{ product.totalPrice | currency:'EUR' }}</p></mat-grid-tile>
+        </mat-grid-list>
+      </mat-expansion-panel>
+    </mat-accordion>
+    
+    
+  </mat-card-content>
+</mat-card>
+
