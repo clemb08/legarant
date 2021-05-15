@@ -1,4 +1,4 @@
-### Application mobile Legarant
+# Application mobile Legarant
 
 ## description
 
@@ -12,7 +12,7 @@ L'application est développée en deux parties. Un Back-end NodeJs dont l'objet 
 
 ## Tester l'application en local
 
-# Pre-requisite
+### Pre-requisite
 
 1 - Créer une organisation Salesforce (Developer Edition) : https://developer.salesforce.com/signup ;
 
@@ -40,7 +40,7 @@ L'application est développée en deux parties. Un Back-end NodeJs dont l'objet 
 
         OrderItem : Contract__c, CreatedDate, EndDate, Id, Product2Id, Product_Name__c, Quantity, TotalPrice ;
 
-# Télécharger et démarrer l'application en local
+### Télécharger et démarrer l'application en local
 
 1 - Cloner l'application dans un dossier en local ;
 2 - Se positionner dans le dossier `/client` - `cd client/` ;
