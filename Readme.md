@@ -2,12 +2,12 @@
 
 ## Description
 
-Application pour le projet final du parcours développeur d'application (Salesforce) d'Openclassrooms. l'objectif de cette application est de permettre au client d'afficher des données présentes dans son organisation Salesforce à ses clients représentés en tant que Contact dans l'organisation.
+Application pour le projet final du parcours développeur d'application (Salesforce) d'Openclassrooms. l'objectif de cette application est de permettre au client d'afficher des données présentes dans son organisation Salesforce à ses clients représentés en tant que Contact dans l'organisation. Cette application est un sample de ce qu'il est possible de faire aec Heroku et Salesforce (des éléments asques de développement web n'ont pas été implémentés au niveau sécurité notammaent).
 
 ## L'application
 
 L'application est développée en deux parties. Un Back-end NodeJs dont l'objet est double :
-- Servir le buil de la partie front-end ;
+- Servir le build de la partie front-end ;
 - Contient des endpoints API permettant de transmettre les requêtes du client à la base de donnée ;
 
 ## Tester l'application en local
